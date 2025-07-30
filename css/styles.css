@@ -1,10 +1,20 @@
+/*------------------ CUSTOM CSS ------------------*/
+
+:root {
+  --primary-color: #8889C5;
+  --hoover-color: #A99799;
+  --bg-color: #F2F0F1;
+  --flexbox-spacing: 1 1 calc(50% - 10px);
+  --max-width: 1200px;
+}
+
 /*------------------ FLEXBOXES ------------------*/
 
 .flex-container, .icons-flex-container, .doctor-flexcontainer, .footer-container {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: auto;
 }
 
@@ -12,7 +22,7 @@
   display: flex;
   text-align: center;
   border-radius: 5px;
-  flex: 1 1 calc(50% - 10px);
+  flex: var(--flexbox-spacing);
 }
 
 .flex-empty-box {
@@ -29,7 +39,7 @@
 /*------------------- HEADER ------------------*/
 
 .header {
-  background-color: #8889C5;
+  background-color: var(--primary-color);
   padding: 0.2rem;
 }
 
@@ -76,7 +86,7 @@
 }
 
 .link-box a:hover {
-  color: #A99799;
+  color: var(--hoover-color);
 }
 
 /* Nested flex-box */
@@ -112,7 +122,7 @@
 /* --------------- SEARCH FORM -------------- */
 
 .form-container, .question-box, .form-box {
-  background-color: #F2F0F1;
+  background-color: var(--bg-color);
 }
 
 .form-container {
@@ -123,7 +133,7 @@
 
 .question-box, .form-box {
   text-align: center;
-  flex: 1 1 calc(50% - 10px);
+  flex: var(--flexbox-spacing);
 }
 
 /* search form box */
@@ -138,7 +148,7 @@
 }
 
 .submit:hover {
-  background-color: #A99799;
+  background-color: var(--hoover-color);
   border: none;
 }
 
@@ -153,7 +163,7 @@ form input:focus, input:active, form input:visited {
   gap: 40px;
   padding: 1rem;
   width: 80%;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
   background-color: #fff;
   border-radius: 8px;
@@ -171,7 +181,7 @@ form input:focus, input:active, form input:visited {
 .icon {
   width: 100px; 
   height: 100px; 
-  background-color: #8486c2; 
+  background-color: var(--primary-color);
   border-radius: 50%; 
   margin-bottom: 20px;
 }
@@ -204,7 +214,7 @@ img.icon-img {
 .doctor-text {
   display: flex;
   flex-direction: column;
-  background-color: #F2F0F1;
+  background-color: var(--bg-color);
   padding: 2rem 2rem 3rem 2rem;
   border-radius: 8px;
 }

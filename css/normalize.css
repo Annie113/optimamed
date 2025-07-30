@@ -1,6 +1,4 @@
-/* ⚠️ Don't edit this file. ⚠️  */
-
-/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+/* Main */
 
 body, html, main, button, form {
   box-sizing: border-box;
@@ -33,6 +31,8 @@ li {
     padding: 0;
 }
 
+/* hyperlink styles */
+
 a {
     text-decoration: none;
     color: #fff;
@@ -50,6 +50,8 @@ img {
     max-width: 100%;
     border-radius: 15px;
 }
+
+/* fonts */
 
 h1 {
     font-size: max(0.1vw, 2.57rem);
@@ -92,11 +94,3 @@ button:hover, .icon-button:hover {
     font-weight: bold;
     border: none;
 }
-
-/* ul,
-li {
-    list-style: none;
-} */
-
-
-/* ⚠️ Don't edit this file. ⚠️  */
