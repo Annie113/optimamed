@@ -1,0 +1,102 @@
+/* ⚠️ Don't edit this file. ⚠️  */
+
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+body, html, main, button, form {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; font-size: 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Default margins */
+
+html,
+body,
+header,
+footer,
+main,
+header,
+div,
+p,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-size: 1.05rem;
+}
+
+a:hover {
+    color: #D5C5C6;
+  }
+
+/* Images */
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: max(0.1vw, 2.57rem);
+    color: #0D0D0B;
+    text-align: left;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #776EA9;
+}
+
+h3 {
+    color:#0D0D0B;
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #1C1919;
+}
+
+/* buttons */
+
+button {
+    background-color: #8889C5;
+    border: 1px solid #8889C5;
+    border-radius: 50px;
+    color: white;
+    padding: 0px 32px;
+    height: 2.6rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+button:hover, .icon-button:hover {
+    background-color: #A99799;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+/* ul,
+li {
+    list-style: none;
+} */
+
+
+/* ⚠️ Don't edit this file. ⚠️  */
