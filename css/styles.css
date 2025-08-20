@@ -237,7 +237,7 @@ img.icon-img {
 /*----------- DOORS FLEX CONTAINER  ----------*/
 
 .doctor-flexcontainer {
-  gap: 40px 5px;
+  gap: 80px 5px;
   justify-content: center;
 }
 
@@ -365,7 +365,6 @@ footer {
 
   .doctor-container {
     min-width: 100%;
-    padding: 30px 0;
   }
 
   .flex-item { width: 45%; }
