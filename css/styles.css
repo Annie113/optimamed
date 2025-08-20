@@ -41,7 +41,6 @@ button, .icon-button {
   color: #fff;
   cursor: pointer;
   text-align: center;
-  font-weight: normal;
 }
 
 button:hover {
@@ -296,7 +295,6 @@ footer {
   padding: 13rem 0 1rem 0;
   position: relative; 
   bottom: 2rem;
-  margin-top: -2rem;
 }
 
 .footer-item {
