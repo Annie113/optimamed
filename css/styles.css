@@ -41,6 +41,7 @@ button, .icon-button {
   color: #fff;
   cursor: pointer;
   text-align: center;
+  font-weight: normal;
 }
 
 button:hover {
