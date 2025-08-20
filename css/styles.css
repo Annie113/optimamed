@@ -29,11 +29,9 @@ button, .icon-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  font-weight: normal;
   font-size: 14px;
   line-height: 1;              /* keeps label centered on iOS */
-  font-weight: 600;
-
   padding: 0.75rem 1.5rem;     /* adjust as desired */
   border-radius: 9999px;       /* pill shape; change if you prefer */
   border: none;
@@ -294,7 +292,6 @@ footer {
 .footer-container {
   padding: 13rem 0 1rem 0;
   position: relative; 
-  bottom: 2rem;
 }
 
 .footer-item {
