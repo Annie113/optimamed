@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>OptimaMed</title>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <!-- Improved Google Fonts loading (multiple weights + display=swap) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Your styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,10 +20,8 @@
 <body>
 
 <!--------------------------- HEADER ---------------------------> 
-
 <header> 
   <div class="header">
-
     <!-- Navigation Section -->
     <nav class="nav flex-container">
        <a href="#">Home</a>
@@ -25,20 +29,16 @@
        <a href="#">Reviews</a>
        <a href="#">Contact</a>
      </nav>
-
   </div>
 </header>
 
 <!-------------------------- MAIN PAGE -------------------------> 
-
 <main>
 
 <!------------------------- EMPTY BOX --------------------------> 
-
 <div class="emptybox-header"></div>
 
 <!---------------- FRONT PAGE FLEX CONTAINER -------------------> 
-
   <div class="flex-container">
 
      <!-- logo box -->
@@ -63,18 +63,19 @@
      <div class="box nested-flex-box">
        <div>
         <h1>Medical and Healthcare Services</h1>
-     </div>
+       </div>
 
-    <!-- floating box -->
+       <!-- floating box -->
        <div class="floating-box">
          <div class="floating-text-box"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
          <div class="appointment_button"><button>Book appointment</button></div>
        </div>
-    </div>
+     </div>
 
     <!-- front image box -->
      <div class="box front-image-box">
         <div>
+         <!-- Double-check the filename: if it's actually 'front-image.jpg', update here -->
          <img src="images/font-image.jpg" alt="front image">
         </div>
      </div>
@@ -82,11 +83,9 @@
   </div>
 
 <!------------------------- EMPTY BOX -------------------------->
-
 <div class="emptybox"></div>
 
 <!------------------- FORM FLEX CONTAINER ----------------------> 
-
 <div class="form-container">
  <div class="flex-container form-container-2">
  
@@ -107,11 +106,9 @@
 </div>
 
 <!------------------------- EMPTY BOX -------------------------->
-
 <div class="emptybox"></div>
 
 <!------------------- ICONS GRID CONTAINER ---------------------> 
-
 <div class="icons-grid-container">
 
   <!-- Medicine Requests -->
@@ -148,11 +145,9 @@
 </div>
 
 <!------------------------- EMPTY BOX -------------------------->
-
 <div class="emptybox"></div>
 
 <!----------------------- OPENINGHOURS ------------------------->
-
 <div class="flex-container office-container">
 
    <!-- office image box -->
@@ -181,13 +176,10 @@
 </div>
 
 <!------------------------- EMPTY BOX -------------------------->
-
 <div class="emptybox"></div>
 
 <!------------------- DOCTORS FLEX CONTAINER-------------------->
-
-<div class="doctor-container" >
-
+<div class="doctor-container">
   <div class="doctor-flexcontainer">
 
     <!-- doctors h2 and text -->
@@ -227,15 +219,12 @@
     </div>
   
   </div>
-  
 </div>
 
 </main>
 
 <!------------------------ FOOTER ----------------------->
-
 <footer style="background-image: url('images/footer.png')">
-  
   <div class="footer-container">
 
     <!-- Social Media Section -->
@@ -249,13 +238,13 @@
          </div>
       </div>
       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" class="social-link">
+        <a href="https://facebook.com" target="_blank" class="social-link" rel="noopener">
           <i class="fab fa-facebook"></i>
         </a>
-        <a href="https://instagram.com" target="_blank" class="social-link">
+        <a href="https://instagram.com" target="_blank" class="social-link" rel="noopener">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://linkedin.com" target="_blank" class="social-link">
+        <a href="https://linkedin.com" target="_blank" class="social-link" rel="noopener">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
@@ -289,7 +278,6 @@
     </div>
 
    </div>
-
 </footer>
 
 </body>

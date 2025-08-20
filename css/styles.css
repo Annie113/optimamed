@@ -4,9 +4,23 @@
   --primary-color: #8889C5;
   --hoover-color: #A99799;
   --bg-color: #F2F0F1;
-  --flexbox-spacing: 1 1 calc(50% - 10px);
+  --flexbox-spacing: 1 1 100%; /* mobile-first: full width by default */
   --max-width: 1200px;
 }
+
+/* --- Mobile/Safari sanity --- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html, body { overflow-x: hidden; }
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #fff;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
 
 /*------------------ FLEXBOXES ------------------*/
 
@@ -15,7 +29,7 @@
   flex-wrap: wrap;
   width: 80%;
   max-width: var(--max-width);
-  margin: auto;
+  margin: auto;       
 }
 
 .box {
@@ -66,14 +80,9 @@
 
 /* Logo and look for a doctor link */
 
-.logo {
-  width: 3rem;
-}
+.logo { width: 3.5rem; }
 
-.logo,
-.link-box {
-  padding: 0.25em 0.4em;
-}
+.logo, .link-box { padding: 0.25em 0.4em; }
 
 .logo_text {
   width: 4.5rem;
@@ -81,25 +90,24 @@
 }
 
 .link-box a {
-  font-weight: bolder;
   color: #7C73AC;
 }
 
-.link-box a:hover {
-  color: var(--hoover-color);
-}
+.link-box a:hover { color: var(--hoover-color); }
 
 /* Nested flex-box */
 
-.nested-flex-box {
-  flex-direction: column;
-}
+.nested-flex-box { flex-direction: column; }
 
 /* floating box */
 
 .floating-box {
   display: flex;
   padding: 1.3rem 0.8rem;
+}
+
+.appointment_button button:hover {
+  font-weight: normal;
 }
 
 .floating-text-box {
@@ -109,25 +117,18 @@
 
 /* Front image box */
 
-.front-image-box {
-  align-items: center;
-}
+.front-image-box { align-items: center; }
+.front-image-box img { width: 100%; height: auto; }
 
 /*------------------- EMPTY BOX --------------*/
 
-.emptybox {
-  height: 6rem;
-}
+.emptybox { height: 6rem; }
 
 /* --------------- SEARCH FORM -------------- */
 
-.form-container, .question-box, .form-box {
-  background-color: var(--bg-color);
-}
+.form-container, .question-box, .form-box { background-color: var(--bg-color); }
 
-.form-container {
-  height: 13rem;
-}
+.form-container { height: 13rem; }
 
 /* question box */
 
@@ -136,15 +137,27 @@
   flex: var(--flexbox-spacing);
 }
 
+.question-box h2 {
+ font-weight: normal;
+}
+
 /* search form box */
 
 .form input[type=text] {
   padding: 5px 10px;
-  font-size: 17px;
-  border-radius: 4px;;
+  font-size: 17px; /* >=16px prevents iOS zoom */
+  border-radius: 4px;
   border: 1px solid #BEAC90;
   margin: 15px;
   color: #757575;
+}
+
+button, .icon-button { 
+  font-size: 14px; 
+}
+
+.icon-button:hover {
+  font-weight: normal;
 }
 
 .submit:hover {
@@ -187,7 +200,7 @@ form input:focus, input:active, form input:visited {
 }
 
 img.icon-img {
-  width: 50px;
+  min-width: 50px;
   padding: 23px;
 }
 
@@ -198,18 +211,17 @@ img.icon-img {
   padding: 1.8rem 0;
 }
 
-.openinghours-list li {
-  padding: 2px;
-}
+.openinghours-list li { padding: 2px; }
 
-/*----------- DOCTORS FLEX CONTAINER  ----------*/
+/*----------- DOORS FLEX CONTAINER  ----------*/
 
 .doctor-flexcontainer {
   gap: 40px 5px;
   justify-content: center;
 }
 
-/* doctor text */
+/* Fallback margins if old iOS ignores flex gap */
+.doctor-flexcontainer > * { margin: 20px 2.5px; }
 
 .doctor-text {
   display: flex;
@@ -219,11 +231,7 @@ img.icon-img {
   border-radius: 8px;
 }
 
-.h2-doctor {
-  padding: 20px 0;
-}
-
-/* doctor flex items */
+.h2-doctor { padding: 20px 0; }
 
 .doctor-flex-item {
   display: flex;
@@ -231,36 +239,25 @@ img.icon-img {
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   box-shadow: none;
   padding: 0;
 }
 
-.doctor-flex-item img {
-  border-radius: 8px 8px 0px 0px;
-}
+.doctor-flex-item img { border-radius: 8px 8px 0 0; }
 
-.doctor-name {
-  font-weight: bold;
-}
+.doctor-name { font-weight: bold; }
 
 .doctor-box {
   background-color: white;
   padding: 0.4em 1em 1em 1em;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 0 0 8px 8px;
 }
 
-.doctor-box p {
-  padding: 0.3em 0em;
-}
+.doctor-box p { padding: 0.3em 0; }
 
-.doctor-position, .doctor-summary {
-  font-size: 0.95rem;
-}
+.doctor-position, .doctor-summary { font-size: 0.95rem; }
 
-.doctor-position {
-  color:#776EA9;
-}
+.doctor-position { color:#776EA9; }
 
 /*--------------- FOOTER ---------------*/
 
@@ -272,9 +269,10 @@ footer {
 }
 
 .footer-container {
-  padding: 13rem 0rem 1rem 0rem;
-  position: relative;
-  bottom: 2rem;
+  padding: 13rem 0 1rem 0;
+  position: relative; 
+  bottom: 2rem; */
+  margin-top: -2rem;
 }
 
 .footer-item {
@@ -282,9 +280,7 @@ footer {
   margin: 10px;
 }
 
-.footer-item h3 {
-  margin-bottom: 10px;
-}
+.footer-item h3 { margin-bottom: 10px; }
 
 .footer-item ul {
   list-style: none;
@@ -292,19 +288,15 @@ footer {
   margin: 0;
 }
 
-.footer-item ul li {
-  margin: 5px 0;
-}
+.footer-item ul li { margin: 5px 0; }
 
 /* logo */
 
-.logo-footer-box {
-  display: flex;
-}
+.logo-footer-box { display: flex; }
 
 .logo-footer img {
   width: 2rem;
-  padding: 8px 0px;
+  padding: 8px 0;
 }
 
 .logo-text-footer img {
@@ -314,10 +306,7 @@ footer {
 
 /* socials */
 
-.social {
-  position: relative;
-  bottom: 0.1em;
-}
+.social { position: relative; bottom: 0.1em; }
 
 .social-icons {
   display: flex;
@@ -332,58 +321,37 @@ footer {
 /*------------ MEDIA QUERIES ----------------*/
 
 @media only screen and (max-width: 425px) {
-  .link-box {
-     display: none;
-  }
+  .link-box { display: none; }
+  .h2-box { padding-top: 1rem; }
 
-   .h2-box {
-    padding-top: 1rem;
-  }
+  /* Give more breathing room on very small screens */
+  .flex-container, .icons-grid-container, .footer-container { width: 90%; }
 } 
 
 @media only screen and (max-width: 768px) {
-  .floating-text-box {
-     display: none;
-   }
+  .floating-text-box { display: none; }
 } 
 
 @media only screen and (min-width: 768px) {
-  .nav {
-    width: 100%;
-  }
+  /* restore your two-column-ish behavior from tablet up */
+  :root { --flexbox-spacing: 1 1 calc(50% - 10px); }
 
-  .nav, .links-box {
-    justify-content: flex-end;
-  }
+  .nav { width: 100%; }
+  .nav, .links-box { justify-content: flex-end; }
 
-  .form {
-    flex-direction: row;
-  }
+  .form { flex-direction: row; }
+  .form input[type=text] { min-width: 350px; }
 
-  .form input[type=text] { 
-    min-width: 350px;
-  }
-
-  .icons-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .icons-grid-container { grid-template-columns: repeat(2, 1fr); }
 
   .doctor-container {
     min-width: 100%;
-    padding: 30px 0px;
+    padding: 30px 0;
   }
 
-  .flex-item {
-    width: 45%;
-  }
-
-  .empty {
-    width: 10%;
-  }
-
-  .doctor-p {
-    width: 80%;
-  }
+  .flex-item { width: 45%; }
+  .empty { width: 10%; }
+  .doctor-p { width: 80%; }
 }
 
 @media only screen and (min-width: 992px) {
@@ -395,23 +363,14 @@ footer {
     height: 26%;
   }
 
-  .icons-grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .icons-grid-container { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media only screen and (min-width: 1024px) {
-  .doctor-flex-item {
-    width: 27%;
-  }
-  .doctor-flexcontainer {
-    justify-content: space-between;
-  }
+  .doctor-flex-item { width: 27%; }
+  .doctor-flexcontainer { justify-content: space-between; }
 }
 
 @media only screen and (min-width: 1440px) {
-  .floating-box {
-    top: 4.95em;
-  }
+  .floating-box { top: 4.95em; }
 }
-
